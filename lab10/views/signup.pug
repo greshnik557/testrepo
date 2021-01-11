@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')   
+    meta(name='viewport', content='width=device-width')
+    title Регистрация
+  body
+    a(href='/signup') Регистрация
+    a(href='/login') Войти
+    h2 Регистрация
+    if(message)
+      div(class='warnins') #{message}
+    form(action='signup', method='POST', autocomplete='off')
+      input(type='text', name='id', autocomplete='off')
+      input(type='password', name='password')
+      input(type='submit')
